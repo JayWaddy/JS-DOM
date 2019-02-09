@@ -1,61 +1,41 @@
-<style>
-    .method {
-        color: orange;
-    }
-
-    .property {
-        color: cyan
-    }
-
-    .html {
-        color: yellow
-    }
-</style>
-<!-- 
-***
-
-reference:
-
-<span class="method"></span>
-
-<span class="property"></span>
-
-<span class="html"></span>
-
-```html
-
-```
-
-```javascript
-
-```
-
-*** -->
-
 # JavaScript DOM Manipulation Guide - Properties
 
-> ### Common JavaScript properties for DOM manipulation.
+### **Common JavaScript properties for DOM manipulation.**
 
- By selecting elements on the DOM, you are able to change its contents.
+> JavaScript properties provide information about an object. Where methods change objects with (or without) parameters, properties hold specific values or data. For example, in `string.length`, the `length` property holds the value of the variable's length. Nothing has been changed at this point.
 
-<span class="property">**textContent**</span> is a property that can change the text within an HTML element.
+> We'll look at JavaScript properties that are commonly used to manipulate the DOM and change their values by assigning them to variables.
+
+**textContent** is a property that can change the text within an HTML element by replacing DOM element text with its value.
+
+```HTML
+<!-- HTML -->
+<div id="element"></div>
+```
 
 ```javascript
+// JavaScript
+let element = document.querySelector('#element');
+
+console.log(element.textContent);
+// ''
+
 element.textContent = 'Hello, World!';
 
 console.log(element); 
 // <div id="element">Hello, World!</div>
 ```
 
-In addition to <span class="property">**textContent**</span>, there are other useful methods such as <span class="property">**`innerText`**</span>. For the most part, both properties are similar. The main difference being: <span class="property">**innerText**</span> pays attention to the style of the element.
+**innerText**, like *textContent*, can change the text in an HTML element by its text with the propery's value, but will also consider the style or the element and its decendants. 
+
 
 For example:
 
 ```html
-<div id="element">Hello, World!<span>123</span></div>k
+<div id="element">Hello, World!<span style="{display:none;}">123</span></div>
 ```
 
-In the above HTML, a <span class="html">span</span> tag has been added to the <span class="html">div</span>. Now suppose the <span class="html">span</span> element contains the style property "`display: none;`" which hides the <span class="html">span's</span> content in the browser.
+In the above HTML, a `span` tag has been added to the DOM element. The `span` element contains the style property `display: none;` which hides its content in the browser.
 
 By console logging:
 
@@ -64,7 +44,7 @@ console.log(element.textContent);
 // Hello, World! 123
 ```
 
-in the browser, you will see that the <span class="html">span</span> element is still not displayed in the browser, but shows in the console. 
+you will see that the span element is still not displayed in the browser, but shows in the console. *The styling is ignored.*
 
 However, if you were to console log:
 
@@ -73,5 +53,5 @@ console.log(element.innerText);
 // Hello, World!
 ```
 
-the <span class="html">span</span> is ignored as it is in the browser; the styling is payed attention to.
+the `span` is ignored as it is in the browser. *The styling is payed attention to.*
 
