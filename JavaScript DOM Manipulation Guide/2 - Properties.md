@@ -2,11 +2,11 @@
 
 ### **What are Properties?**
 
-> JavaScript properties provide information about an object. Where methods change objects with (or without) parameters, properties hold specific values or data. For example, in `string.length`, the `length` property holds the value of the variable's length. Nothing has been changed at this point.
+JavaScript properties provide information about an object. Where methods change objects with (or without) parameters, properties hold specific values or data. For example, in `string.length`, the `length` property holds the value of the variable's length. Nothing has been changed at this point.
 
 ### **Which Properties are Useful?**
 
-> We'll look at JavaScript properties that are commonly used to manipulate the DOM and change their values by assigning them to variables.
+We'll look at JavaScript properties that are commonly used to manipulate the DOM and change their values by assigning them to variables.
 
 ***
 
@@ -57,7 +57,7 @@ the `span` does not show in the console, and is also is not displayed in the bow
 
 **innerHTML -**
 
-> contains the HTML value within a DOM element. This won't *change* the parent element, but will hold the value of its children.
+> contains the HTML value within a DOM element. This won't *change* the specified element, but will hold the value of its children.
 
 ```javascript
 element.innerHTML = '<h3>This is an h3</h3>';
@@ -71,7 +71,7 @@ The variable `element` will remain as the same `div`, but its HTML content chang
 
 **Style -**
 
-> holds the value of the inline style of an object. To change the style, add a scond property that is a cammel cased version of a CSS style property.  
+> holds the value of the inline style of an object. To change the style, add a second property that is a camel cased version of a CSS style property.  
 
 ```javascript
 element.style.fontSize = '10px';
@@ -90,7 +90,7 @@ Adding styles to multiple objects with a single variable will throw an error in 
 ```
 
 ```javascript
-let listItemm = document.querySelectorAll('li');
+let listItem = document.querySelectorAll('li');
 
 for (let i = 0; i < listItem.length; i++) {
     listItem[i].style.background = 'red';
@@ -99,16 +99,16 @@ for (let i = 0; i < listItem.length; i++) {
 
 **Value -**
 
-> hold the value (in our case) of form keywords like `input`, `submit`, etc. This is the text entered in forms
+> (in our case) holds the value of the text in form `inputs`.
 
 ```javascript
-let input = document.querySelector('input');
+let userInput = document.querySelector('input').value;
 
-if (input.value.toLowerCase() == 'user input') {
+if (userInput.toLowerCase() === 'password') {
     return true;
 }
 
-// If the user types 'user input', then the if statement code will run.
+// If the user types 'password', then the if statement code will run.
 ```
 
 *** 
@@ -121,4 +121,5 @@ if (input.value.toLowerCase() == 'user input') {
 
 1. [Methods](/JavaScript%20DOM%20Manipulation%20Guide/1%20-%20Methods.md "1 - Methods")
 2. [Properties](/JavaScript%20DOM%20Manipulation%20Guide/2%20-%20Properties.md "2 - Properties")
-3. [Traversing](/JavaScript%20DOM%20Manipulation%20Guide/3%20-%20Traversing.md "3 - Traversing")
+3. [Traversing](/JavaScript%20DOM%20Manipulation%20Guide/3%20-%20Traversing%20DOM%20Elements.md "3 - Traversing")
+4. [Create New Elements](/JavaScript%20DOM%20Manipulation%20Guide/4%20-%20Create%20New%20Elements.md "4 - Create New Elements")

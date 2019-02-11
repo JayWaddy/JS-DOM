@@ -2,7 +2,7 @@
 
 ### **What is Traversing?**
 
-> In HTML, elements refered to as *nodes* are infinitely nested inside one another. Each node may posesss a parent node, or element in which the specified node is nested in; a sibling node, or an element adjecnt to the specified node that shares the same parent; or a child node known as decendants which are elements that are nested within the specified node. By *traversing* the DOM, we are jumping between the parent, sibling, and child nodes of an element.
+In HTML, elements refered to as *nodes* are infinitely nested inside one another. Each node may posesss a parent node, or element in which the specified node is nested in; a sibling node, or an element adjecnt to the specified node that shares the same parent; or a child node known as decendants which are elements that are nested within the specified node. By *traversing* the DOM, we are jumping between the parent, sibling, and child nodes of an element.
 
 ```
             <html>
@@ -21,7 +21,7 @@ In the example above, you will see the layout of the DOM. The `body` tag has a *
 
 ### **Which Properties are Used for Traversing?**
 
-> We'll look at JavaScript properties that are commonly used to traverse the DOM and change node values.
+We'll look at JavaScript properties that are commonly used to traverse the DOM and change node values.
 
 ***
 
@@ -61,24 +61,25 @@ Remember, properties are able to stack or chain.
 > works similarly to *parentNode*. Only if there is no parent node, this will return `null`.
 
 ```javascript
-document.body.parentNode; // the <html> element
-document.body.parentElement; // the <html> element
+document.body.parentNode; // <html>...</html>
+document.body.parentElement; // <html>...</html>
 
-document.documentElement.parentNode; // the document node
+document.documentElement.parentNode; // #document
 document.documentElement.parentElement; // null
 
 (document.documentElement.parentNode === document);  // true
 (document.documentElement.parentElement === document);  // false
 ```
 
-#### childNodes -
+#### children -
 
-> returns the children elements of a node. Remember `nodes` is plural here. Like `querySelectorAll()`,  this will return a node list which can be accessed as an array if there are multiple children.
+> returns only children DOM elements of a node. `Children` is plural and will return an HTML collection. **The difference between a node list and HTML collection is that *node lists* contain all types of nodes including text nodes at each line break, and an *HTML collection* only provides HTML elements.**
 
 ```HTML
 <body>
     <div>
         <h1>Hello, World!</h1>
+        <p>Paragraph text</p>
     </div>
 </body>
 ```
@@ -86,14 +87,99 @@ document.documentElement.parentElement; // null
 ```javascript
 let element = document.querySelector('div');
 
-element.childnodes // <h1>Hello, World!</h1>
+element.childnodes.length; // 2 
+// line breaks before and after nodes are ignored.
 ```
+
+#### firstElementChild -
+
+> returns the first child that is an HTML element. If there is no child, this will return null.
+
+```HTML
+<body>
+    <div>
+        <h1>Hello, World!</h1>
+        <p>Paragraph text</p>
+    </div>
+</body>
+```
+
+```javascript
+let element = document.querySelector('div');
+
+element.firstElementChild; // <h1>Hello, World!</h1>
+```
+
+#### lastElementChild -
+
+> like *firstElementChild*, it returns the last child that is an HTML element. If there is no child, this will return null.
+
+```HTML
+<body>
+    <div>
+        <h1>Hello, World!</h1>
+        <p>Paragraph text</p>
+    </div>
+</body>
+```
+
+```javascript
+let element = document.querySelector('div');
+
+element.lastElementChild; // <p>Paragraph text</p>
+```
+
+#### nextElementSibling -
+
+> returns the next DOM element in the HTML. If there is no sibling, this will return null.
+
+```HTML
+<body>
+    <div>
+        <h1>Hello, World!</h1>
+        <p>Paragraph text</p>
+    </div>
+</body>
+```
+
+```javascript
+let element = document.querySelector('div'),
+    h1 = document.querySelector('h1');
+
+element.nextElementSibling; // null
+h1.nextElementSibling; // <p>Paragraph text</p>
+```
+
+#### previousElementSibling -
+
+> returns the previous DOM element in the HTML. If there is no sibling, this will return null.
+
+```HTML
+<body>
+    <div>
+        <h1>Hello, World!</h1>
+        <p>Paragraph text</p>
+    </div>
+</body>
+```
+
+```javascript
+let h1 = document.querySelector('h1'),
+    p = document.querySelector('p');
+
+h1.nextElementSibling; // null
+p.nextElementSibling; // <h1>Hello, World!</h1>
+```
+
+***
 
 [Previous](/JavaScript%20DOM%20Manipulation%20Guide/2%20-%20Properties.md "2 - Properties")
 
+[Next](/JavaScript%20DOM%20Manipulation%20Guide/4%20-%20Create%20New%20Elements.md "4 - Create New Elements")
 
 ## Table of Contents
 
 1. [Methods](/JavaScript%20DOM%20Manipulation%20Guide/1%20-%20Methods.md "1 - Methods")
 2. [Properties](/JavaScript%20DOM%20Manipulation%20Guide/2%20-%20Properties.md "2 - Properties")
-3. [Traversing DOM Elements](/JavaScript%20DOM%20Manipulation%20Guide/3%20-%20Traversing%20DOM%20Elements.md "3 - Traversing DOM Elements")
+3. [Traversing](/JavaScript%20DOM%20Manipulation%20Guide/3%20-%20Traversing%20DOM%20Elements.md "3 - Traversing")
+4. [Create New Elements](/JavaScript%20DOM%20Manipulation%20Guide/4%20-%20Create%20New%20Elements.md "4 - Create New Elements")
