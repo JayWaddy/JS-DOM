@@ -15,21 +15,17 @@
 > a property that contains the raw text value of an HTML element that is visible to the document object. Re-assigning its value will replace DOM element text with its current value.
 
 ```HTML
-<!-- HTML -->
 <div id="element"></div>
 ```
 
 ```javascript
-// JavaScript
 let element = document.querySelector('#element');
 
-console.log(element.textContent);
-// ''
+element.textContent // ''
 
 element.textContent = 'Hello, World!';
 
-console.log(element); 
-// <div id="element">Hello, World!</div>
+element;  // <div id="element">Hello, World!</div>
 ```
 
 **innerText -**
@@ -46,8 +42,7 @@ In the above HTML, a `span` tag has been added to the DOM element. The `span` co
 By console logging:
 
 ```javascript
-console.log(element.textContent);
-// Hello, World! 123
+element.textContent; // Hello, World! 123
 ```
 
 you will see the span element is visible in the console, but is not displayed in the browser. *The styling is ignored in JavaScript.*
@@ -55,8 +50,7 @@ you will see the span element is visible in the console, but is not displayed in
 However, if you were to console log:
 
 ```javascript
-console.log(element.innerText);
-// Hello, World!
+element.innerText; // Hello, World!
 ```
 
 the `span` does not show in the console, and is also is not displayed in the bowser. *The styling is payed attention to in JavaScript.*
@@ -68,7 +62,7 @@ the `span` does not show in the console, and is also is not displayed in the bow
 ```javascript
 element.innerHTML = '<h3>This is an h3</h3>';
 
-console.log(element);
+element;
 // <div id="element">
 //    <h3>This is an h3</h3>
 // </div>
@@ -99,7 +93,7 @@ Adding styles to multiple objects with a single variable will throw an error in 
 let listItemm = document.querySelectorAll('li');
 
 for (let i = 0; i < listItem.length; i++) {
-    listItem.style.background = 'red';
+    listItem[i].style.background = 'red';
 }
 ```
 
@@ -110,20 +104,21 @@ for (let i = 0; i < listItem.length; i++) {
 ```javascript
 let input = document.querySelector('input');
 
-input.value = 'Hello, World!';
-
-if (input.value.toLowerCase() == 'hello, world!') {
+if (input.value.toLowerCase() == 'user input') {
     return true;
 }
 
-// true
+// If the user types 'user input', then the if statement code will run.
 ```
 
 *** 
 
-[Previous Page](/JavaScript%20DOM%20Manipulation%20Guide/1%20-%20Methods.md "1 - Methods")
+[Previous](/JavaScript%20DOM%20Manipulation%20Guide/1%20-%20Methods.md "1 - Methods")
+
+[Next](/JavaScript%20DOM%20Manipulation%20Guide/3%20-%20Traversing.md "3 - Traversing")
 
 ## Table of Contents
 
 1. [Methods](/JavaScript%20DOM%20Manipulation%20Guide/1%20-%20Methods.md "1 - Methods")
 2. [Properties](/JavaScript%20DOM%20Manipulation%20Guide/2%20-%20Properties.md "2 - Properties")
+3. [Traversing](/JavaScript%20DOM%20Manipulation%20Guide/3%20-%20Traversing.md "3 - Traversing")
