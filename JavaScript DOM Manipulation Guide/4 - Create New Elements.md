@@ -21,7 +21,7 @@ let newDiv = document.createElement('div'); // <div></div>
 > sets the value of the specified element's attribute. If an attribute already exists, this will update its value. This method takes two string parameters: a `name` and `value`.
 
 ```javascript
-newDive.setSttribute('title', 'new-div'); // <div title="new-div"></div>
+newDiv.setAttribute('title', 'new-div'); // <div title="new-div"></div>
 ```
 
 #### createTextNode() -
@@ -34,7 +34,7 @@ let newDivText = document.createTextNode('Hello, World!');
 
 #### appendChild() -
 
-> adds a child node at the end of the node list of the specified element. The required parameter is the value of the node it will create. If the node already exists in the DOM, it will be removed. To clone a node use `cloneNode()`.
+> adds a child node at the end of the node list of the specified element. The required parameter is the value of the node it will create. If the node already exists in the document, it will be moved to this location. To clone a node use `cloneNode()`.
 
 ```javascript
 newDiv.appendChild(newDivText); // <div title="new-div">Hello, World!</div>
@@ -44,10 +44,20 @@ The text node that was created earlier is used as a parameter of `appendChild` w
 
 #### insertBefore() -
 
-> creates an HTML element with a specified tag name parameter as a string.
+> positions a child node within the specified element. This takes two parameters: the child node being created, and the node it will be placed before. If the node already exists in the document, it will be moved to this location. To clone a node use `cloneNode()`.
+
+```HTML 
+<body>
+    <img src="/photo.png">
+</body>
+```
 
 ```javascript
-
+document.body.insertBefore(newDiv, img);    
+//  <body>
+//      <div title="new-div">Hello, World!</div>
+//      <img src="/photo.png">
+//  </body>
 ```
 
 ***
@@ -56,18 +66,22 @@ The text node that was created earlier is used as a parameter of `appendChild` w
 
 #### id -
 
-> creates an HTML element with a specified tag name parameter as a string.
+> holds the value of an elemnt's `id`.
 
 ```javascript
+let newDiv = document.createElement('div');
 
+newDiv.id = 'newDiv'; // <div id="newDiv"></div>
 ```
 
 #### className -
 
-> creates an HTML element with a specified tag name parameter as a string.
+> holds the value of an elemnt's `class`.
 
 ```javascript
+let newDiv = document.createElement('div');
 
+newDiv.className = 'newDiv'; // <div class="newDiv"></div>
 ```
 
 ***
