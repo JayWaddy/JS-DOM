@@ -1,6 +1,6 @@
-[Previous](/JavaScript%20DOM%20Manipulation%20Guide/1%20-%20Methods.md "1 - Methods")
+[Previous - Methods](/JavaScript%20DOM%20Manipulation%20Guide/1%20-%20Methods.md "1 - Methods")
 
-[Next](/JavaScript%20DOM%20Manipulation%20Guide/3%20-%20Traversing.md "3 - Traversing")
+[Next - Traversing](/JavaScript%20DOM%20Manipulation%20Guide/3%20-%20Traversing.md "3 - Traversing")
 
 # JavaScript DOM Manipulation Guide - Properties
 
@@ -117,13 +117,14 @@ if (userInput.toLowerCase() === 'password') {
 
 *** 
 
-[Previous](/JavaScript%20DOM%20Manipulation%20Guide/1%20-%20Methods.md "1 - Methods")
+[Previous - Methods](/JavaScript%20DOM%20Manipulation%20Guide/1%20-%20Methods.md "1 - Methods")
 
-[Next](/JavaScript%20DOM%20Manipulation%20Guide/3%20-%20Traversing.md "3 - Traversing")
+[Next - Traversing](/JavaScript%20DOM%20Manipulation%20Guide/3%20-%20Traversing.md "3 - Traversing")
 
 ## Table of Contents
 
 1. [Methods](/JavaScript%20DOM%20Manipulation%20Guide/1%20-%20Methods.md "1 - Methods")
 2. [Properties](/JavaScript%20DOM%20Manipulation%20Guide/2%20-%20Properties.md "2 - Properties")
 3. [Traversing](/JavaScript%20DOM%20Manipulation%20Guide/3%20-%20Traversing.md "3 - Traversing")
-4. [Create New Elements](/JavaScript%20DOM%20Manipulation%20Guide/4%20-%20Create%20New%20Elements.md "4 - Create New Elements")
+4. [Create Elements](/JavaScript%20DOM%20Manipulation%20Guide/4%20-%20Create%20Elements.md "4 - Create New Elements")
+5. [Events](/JavaScript%20DOM%20Manipulation%20Guide/5%20-%20Events.md "5 - Events")

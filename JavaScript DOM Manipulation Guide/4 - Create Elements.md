@@ -1,12 +1,19 @@
-[Previous](/JavaScript%20DOM%20Manipulation%20Guide/2%20-%20Properties.md "2 - Properties")
+[Previous - Traversing](/JavaScript%20DOM%20Manipulation%20Guide/2%20-%20Properties.md "2 - Properties")
+
+[Next - Events](/JavaScript%20DOM%20Manipulation%20Guide/5%20-%20Events.md "5 - Events")
 
 # JavaScript DOM Manipulation Guide - Create New Elements
 
 ### **Creating a New Element**
 
+Previously, adding ad element to the DOM requires adding markup to the HTML, but there are ways in creating DOM elements using JavaScript. This can be useful for temporary elements and things users can interact with without creating it in the HTML document and setting it to `style="{display: none;}"`.
+
 ***
 
 ### **New Element Methods**
+
+Creating elements in JavaScript can be done in 5 steps:
+
 
 #### createElement() -
 
@@ -64,6 +71,8 @@ document.body.insertBefore(newDiv, img);
 
 ### **New Element properties**
 
+With creating new elements in JavaScript, the `id` and `class` values can be set with their corrosponding properties:
+
 #### id -
 
 > holds the value of an elemnt's `id`.
@@ -86,7 +95,9 @@ newDiv.className = 'newDiv'; // <div class="newDiv"></div>
 
 ***
 
-[Previous](/JavaScript%20DOM%20Manipulation%20Guide/2%20-%20Properties.md "2 - Properties")
+[Previous - Traversing](/JavaScript%20DOM%20Manipulation%20Guide/2%20-%20Properties.md "2 - Properties")
+
+[Next - Events](/JavaScript%20DOM%20Manipulation%20Guide/5%20-%20Events.md "5 - Events")
 
 
 ## Table of Contents
@@ -94,4 +105,5 @@ newDiv.className = 'newDiv'; // <div class="newDiv"></div>
 1. [Methods](/JavaScript%20DOM%20Manipulation%20Guide/1%20-%20Methods.md "1 - Methods")
 2. [Properties](/JavaScript%20DOM%20Manipulation%20Guide/2%20-%20Properties.md "2 - Properties")
 3. [Traversing](/JavaScript%20DOM%20Manipulation%20Guide/3%20-%20Traversing.md "3 - Traversing")
-4. [Create New Elements](/JavaScript%20DOM%20Manipulation%20Guide/4%20-%20Create%20New%20Elements.md "4 - Create New Elements")
+4. [Create Elements](/JavaScript%20DOM%20Manipulation%20Guide/4%20-%20Create%20Elements.md "4 - Create New Elements")
+5. [Events](/JavaScript%20DOM%20Manipulation%20Guide/5%20-%20Events.md "5 - Events")

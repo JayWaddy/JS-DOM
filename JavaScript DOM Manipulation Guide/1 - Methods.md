@@ -1,6 +1,6 @@
-[Previous](/README.md "Home")
+[Previous - Home](/README.md "Home")
 
-[Next](/JavaScript%20DOM%20Manipulation%20Guide/2%20-%20Properties.md "2 - Properties")
+[Next - Properties](/JavaScript%20DOM%20Manipulation%20Guide/2%20-%20Properties.md "2 - Properties")
 
 # JavaScript DOM Manipulation Guide - Methods
 
@@ -55,7 +55,7 @@ Other selector methods:
 >returns a collection of DOM elements (including their decendants) that match the specified CSS selector: `.class`, `#id`, or `tag` as a parameter in the form of a string.
 
 ***
-### **Which methods are Useful?**
+### **Which Methods are Useful?**
 
 We'll look at JavaScript methods that are commonly used to manipulate the DOM and change their values by assigning them to variables.
 
@@ -104,43 +104,14 @@ array.indexOf(true); // 0
 array.indexOf(false); // 1
 ```
 
-#### addEventListener() -
+[Previous - Home](/README.md "Home")
 
-> sets up a funtion to run after a specified event has ben executed. This method requires two parameters: a type, and a listener.
-
-1. The *type* parameter holds a string value of the event that is being listened for before running a function: `click`, `scroll`, `focus`, `blur`, `mouseover`, `mouseout`, [more types here](https://developer.mozilla.org/en-US/docs/Web/Events "Full list of web events").
-2. The *listener* is the function name that will run after the type of even is executed.
-
-```javascript
-let button = document.querySelector(button),
-    buttonClick = button.addEventListener('click', () => {
-        console.log('Button clicked!');
-    });
-```
-
-```javascript
-let button = document.querySelector(button),
-    buttonClick = button.addEventListener('click', click);
-
-    function click() {
-        console.log('Button clicked!');
-    }
-```
-
-
-
-<!-- #### removeEventListener() -
-
-> definition and example. -->
-***
-
-[Previous](/README.md "Home")
-
-[Next](/JavaScript%20DOM%20Manipulation%20Guide/2%20-%20Properties.md "2 - Properties")
+[Next - Properties](/JavaScript%20DOM%20Manipulation%20Guide/2%20-%20Properties.md "2 - Properties")
 
 ## Table of Contents
 
 1. [Methods](/JavaScript%20DOM%20Manipulation%20Guide/1%20-%20Methods.md "1 - Methods")
 2. [Properties](/JavaScript%20DOM%20Manipulation%20Guide/2%20-%20Properties.md "2 - Properties")
 3. [Traversing](/JavaScript%20DOM%20Manipulation%20Guide/3%20-%20Traversing.md "3 - Traversing")
-4. [Create New Elements](/JavaScript%20DOM%20Manipulation%20Guide/4%20-%20Create%20New%20Elements.md "4 - Create New Elements")
+4. [Create Elements](/JavaScript%20DOM%20Manipulation%20Guide/4%20-%20Create%20Elements.md "4 - Create New Elements")
+5. [Events](/JavaScript%20DOM%20Manipulation%20Guide/5%20-%20Events.md "5 - Events")
