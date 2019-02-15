@@ -38,6 +38,19 @@ button.addEventListener('click', buttonClick);
 
 ***
 
+#### removeEventListener() -
+
+> removes an event created with *addEventListener()* using the same function for both methods.
+
+```javascript
+let button = document.querySelector('button'),
+    buttonClick = function click() {
+        console.log('The button was clicked.');
+    };
+
+button.removeEventListener('click', buttonClick);
+```
+
 ### **What is an Event Parameter?**
 
 When making a fucntion, you can choose to add a parameter with any given name, commonly: `e` or `event`. This parameter is an object that holds a data list of all the properties of (in our case) the event that just fired.
